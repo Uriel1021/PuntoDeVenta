@@ -45,3 +45,10 @@ C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\bin\Debug\Syst
 C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\bin\Debug\System.Threading.Channels.xml
 C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\bin\Debug\System.ValueTuple.xml
+C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\obj\Debug\Punto_de_Venta.Vistas.modificarProducto.resources
+C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\obj\Debug\Punto_de_Venta.Vistas.listarProveedores.resources
+C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\obj\Debug\Punto_de_Venta.Vistas.agregarProveedores.resources
+C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\obj\Debug\Punto_de_Venta.Vistas.modificarProveedor.resources
+C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\obj\Debug\Punto_de_Venta.Vistas.DetallesProducto.resources
+C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\obj\Debug\Punto_de_Venta.Vistas.detallesProveedor.resources
+C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\obj\Debug\Punto_de_Venta.Vistas.Ventas.resources

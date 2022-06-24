@@ -38,5 +38,19 @@ namespace Punto_de_Venta
             agregarCategoria agregarCategoria = new agregarCategoria();
             agregarCategoria.Show();
         }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            listarProveedores listarproveedores = new listarProveedores();
+            listarproveedores.Show();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            Ventas venta = new Ventas();
+            venta.Show();
+            this.Hide();
+        }
     }
 }

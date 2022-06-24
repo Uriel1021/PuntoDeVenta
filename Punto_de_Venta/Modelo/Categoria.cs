@@ -8,11 +8,7 @@ namespace Punto_de_Venta.Modelo
 {
     internal class Categoria
     {
-        private string categoriaName;
-        public string CategoriaName
-        {
-            get { return categoriaName; }
-            set { categoriaName = value; }
-        }
+        public int CategoriaId { get; set; }
+        public string CategoriaName { get; set; }
     }
 }

@@ -39,7 +39,9 @@ namespace Punto_de_Venta.Vistas
             producto.CodigoBarra = textBox8.Text;
             producto.FechaEntrada = textBox9.Text;
             daos.insertarProducto(producto);
-            MessageBox.Show("Se ha guardado la imagen en la db");
+            this.Hide();
+            listarProducto listarproducto = new listarProducto();
+            listarproducto.Show();
         }
     
         private void button1_Click(object sender, EventArgs e)
@@ -69,6 +71,32 @@ namespace Punto_de_Venta.Vistas
                 comboBox1.Items.Add(rd[0]);
             }
             rd.Close(); 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -31,11 +31,21 @@ namespace Punto_de_Venta.Vistas
             Categoria categoria = new Categoria();
             categoria.CategoriaName = textBox1.Text;
             daos.insertarCategoria(categoria);
+            agregarCategoria agregarCategoria = new agregarCategoria();
+            agregarCategoria.Show();
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
+        }
+
+        private void agregarCategoria_Load(object sender, EventArgs e)
+        {
+            Daos daos = new Daos();
+            List<Categoria> datos = new List<Categoria>();
+            datos = daos.ConsultaCategoria();
+            dgv_control.DataSource = datos;
         }
     }
 }
