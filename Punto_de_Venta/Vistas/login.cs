@@ -24,9 +24,18 @@ namespace Punto_de_Venta
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            inicio init = new inicio();
-            init.Show();
+            if(bunifuTextbox1.text == "URIEL" && bunifuTextbox2.text == "123456")
+            {
+                this.Hide();
+                inicio init = new inicio();
+                init.Show();
+            }
+            else
+            {
+                MessageBox.Show("Contraseña Incorrecta");
+            }
+
+            
             
 
 

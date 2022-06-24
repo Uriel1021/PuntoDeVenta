@@ -104,5 +104,12 @@ namespace Punto_de_Venta
                 this.Hide();
             }
         }
+
+        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            Imagen imagen = new Imagen();
+            imagen.Show();
+            this.Hide();
+        }
     }
 }

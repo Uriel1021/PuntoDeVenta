@@ -52,3 +52,4 @@ C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\obj\Debug\Punt
 C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\obj\Debug\Punto_de_Venta.Vistas.DetallesProducto.resources
 C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\obj\Debug\Punto_de_Venta.Vistas.detallesProveedor.resources
 C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\obj\Debug\Punto_de_Venta.Vistas.Ventas.resources
+C:\Users\Ariake Merino\source\repos\Punto_de_Venta\Punto_de_Venta\obj\Debug\Punto_de_Venta.Vistas.Imagen.resources

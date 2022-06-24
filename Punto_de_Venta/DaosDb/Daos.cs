@@ -366,9 +366,6 @@ namespace Punto_de_Venta.Conexion
             }
             CloseConexion(connection);
         }
-
-
-
         public List<ProductoVenta> BuscarProductoVenta(string prod)
         {
             List<ProductoVenta> listaRetorna = new List<ProductoVenta>();
@@ -468,6 +465,78 @@ namespace Punto_de_Venta.Conexion
             }
             CloseConexion(connection);
             return listaRetorna;
+        }
+
+        public void insertarImagen(ModelImag modelImg,int valor)
+        {
+            string cadenaDeConexionTabla = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario + ";" + "password=" + password + ";" + "database=" + bd + ";";
+            NpgsqlConnection connectionInsertarElement = new NpgsqlConnection(cadenaDeConexionTabla);
+            string QUERY_INSERT_ELEMENTOS = "UPDATE producto SET imagen= @img WHERE producto="+valor+";";
+            NpgsqlCommand commandInsert = new NpgsqlCommand(QUERY_INSERT_ELEMENTOS, connectionInsertarElement);
+            //6. Abrir la conexión a la db
+            try
+            {
+                if (connectionInsertarElement.State == System.Data.ConnectionState.Closed)
+                {
+                    NpgsqlParameter param = commandInsert.CreateParameter();
+                    param.ParameterName = "@img";
+                    param.NpgsqlDbType = NpgsqlTypes.NpgsqlDbType.Bytea;
+                    param.Value = modelImg.img;
+                    commandInsert.Parameters.Add(param);
+                    connectionInsertarElement.Open();
+                }
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                if (connectionInsertarElement.State == System.Data.ConnectionState.Open)
+                {
+                    commandInsert.ExecuteNonQuery();
+
+                    MessageBox.Show("Se ha guardado correctamente la imagen");
+                }
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            CloseConexion(connectionInsertarElement);
+        }
+
+
+
+        public Byte[] consultarTodo(int id)
+        {
+            Byte[] data = null;
+            string cadenaDeConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario + ";" + "password=" + password + ";" + "database=" + bd + ";";
+            NpgsqlConnection connectionConsultar = new NpgsqlConnection(cadenaDeConexion);
+            string query = string.Format("SELECT producto FROM imagen WHERE producto={0};", id);
+            NpgsqlCommand commandConsultar = new NpgsqlCommand(query, connectionConsultar);
+            ConectionState(connectionConsultar);
+            try
+            {
+                if (connectionConsultar.State == System.Data.ConnectionState.Open)
+                {
+                    NpgsqlDataReader dataReader = commandConsultar.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        data = (Byte[])dataReader[0];
+                    }
+
+                }
+            }
+            catch (NpgsqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            CloseConexion(connectionConsultar);
+            return data;
+
         }
     }
 }
